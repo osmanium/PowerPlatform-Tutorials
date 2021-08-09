@@ -38,6 +38,9 @@ export class HelloWorld
     this.props.value = context.parameters.sampleProperty.raw || "";
     this.notifyChange = this.notifyChange.bind(this);
     this.props.onChange = this.notifyChange;
+
+    //Trigger change so that UI can get initial Output
+    this._notifyOutputChanged();
   }
 
   /**
