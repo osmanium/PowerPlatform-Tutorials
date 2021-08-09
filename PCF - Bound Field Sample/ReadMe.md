@@ -17,3 +17,7 @@ Simple code base for React based PCF Code Component
 # Execution Log
 
 ![Logs](Images/ExecutionOrder.png)
+
+# Important
+
+- Test in real environment, Test Harness executes double/wrong updateView
