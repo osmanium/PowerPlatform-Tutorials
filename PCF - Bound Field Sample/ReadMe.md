@@ -14,10 +14,6 @@ Simple code base for React based PCF Code Component
 
 <br>
 
-# Form Sample
-
-![Sample](Images/FormSample.png)
-
 # Execution Log
 
 ![Logs](Images/ExecutionOrder.png)
