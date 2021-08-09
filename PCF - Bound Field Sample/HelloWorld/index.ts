@@ -33,14 +33,21 @@ export class HelloWorld
     state: ComponentFramework.Dictionary,
     container: HTMLDivElement
   ): void {
+    console.log("init");
+
     this._notifyOutputChanged = notifyOutputChanged;
     this._container = container;
     this.props.value = context.parameters.sampleProperty.raw || "";
     this.notifyChange = this.notifyChange.bind(this);
     this.props.onChange = this.notifyChange;
 
-    //Trigger change so that UI can get initial Output
-    this._notifyOutputChanged();
+    ReactDOM.render(
+      React.createElement(CustomInput, this.props),
+      this._container
+    );
+
+    // //Trigger change so that UI can get initial Output
+    // this._notifyOutputChanged();
   }
 
   /**
@@ -49,14 +56,13 @@ export class HelloWorld
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     // Add code to update control view
-    this._value = context.parameters.sampleProperty.raw || "";
-    console.log("updateView " + this._value);
-    this.props.value = this._value;
+    const changedValue = context.parameters.sampleProperty.raw || "";
 
-    ReactDOM.render(
-      React.createElement(CustomInput, this.props),
-      this._container
-    );
+    if (changedValue !== undefined && this._value !== changedValue) {
+      console.log("updateView, from: " + this._value + " to: " + changedValue);
+      this._value = changedValue;
+      this.props.value = this._value;
+    }
   }
 
   /**
@@ -64,9 +70,9 @@ export class HelloWorld
    * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
    */
   public getOutputs(): IOutputs {
-    console.log("getOutputs" + this._value);
+    console.log("getOutputs: " + this._value);
     return {
-      sampleProperty: this._value || "NULL-NAN",
+      sampleProperty: this._value,
     };
   }
 
@@ -81,6 +87,6 @@ export class HelloWorld
   notifyChange(value: string) {
     this._value = value;
     this._notifyOutputChanged();
-    console.log("value changed from react " + this._value);
+    console.log("value changed from delegate method: " + this._value);
   }
 }

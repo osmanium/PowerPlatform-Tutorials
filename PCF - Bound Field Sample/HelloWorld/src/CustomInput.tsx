@@ -15,9 +15,9 @@ export const CustomInput: React.FunctionComponent<ICustomInputProps> = (
       type="text"
       value={text}
       onChange={(e): void => {
+        console.log("input on change: " + e.currentTarget.value);
         setText(e.currentTarget.value);
         props.onChange(e.currentTarget.value);
-        console.log("input on change " + e.currentTarget.value);
       }}
     />
   );
