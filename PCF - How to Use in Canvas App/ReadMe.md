@@ -22,3 +22,6 @@
 - Use in Canvas App
   <br/>
   ![Usage](Images/Usage.png)
+  <br/>
+## 3- Important
+- PCF Code Component can be also used in Custom Pages same as Canvas Apps
