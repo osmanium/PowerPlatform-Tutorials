@@ -16,8 +16,9 @@
   ![ImportCanvas](Images/ImportPCFControl.png)
   <br/>
 - Find recently imported Code Component in Toolbox
-<br/>
+  <br/>
   ![CodeComponentToolbox](Images/CodeComponentToolbox.png)
   <br/>
 - Use in Canvas App
+  <br/>
   ![Usage](Images/Usage.png)
