@@ -16,7 +16,12 @@
   ![ImportCanvas](Images/ImportPCFControl.png)
   <br/>
 - Find recently imported Code Component in Toolbox
+  <br/>
   ![CodeComponentToolbox](Images/CodeComponentToolbox.png)
   <br/>
 - Use in Canvas App
+  <br/>
   ![Usage](Images/Usage.png)
+  <br/>
+## 3- Important
+- PCF Code Component can be also used in Custom Pages same as Canvas Apps
