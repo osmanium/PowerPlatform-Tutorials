@@ -7,12 +7,10 @@ export class HelloWorld
   implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
   private props: ICustomInputProps = {
-    value: "",
     onChange: this.notifyChange,
   };
   private _notifyOutputChanged: () => void;
   private _container: HTMLDivElement;
-  private _value: string;
 
   /**
    * Empty constructor.
@@ -33,11 +31,10 @@ export class HelloWorld
     state: ComponentFramework.Dictionary,
     container: HTMLDivElement
   ): void {
-    console.log("init");
-
-    this._notifyOutputChanged = notifyOutputChanged;
     this._container = container;
+    this._notifyOutputChanged = notifyOutputChanged;
     this.props.value = context.parameters.sampleProperty.raw || "";
+    console.log("init: " + this.props.value);
     this.notifyChange = this.notifyChange.bind(this);
     this.props.onChange = this.notifyChange;
 
@@ -45,9 +42,6 @@ export class HelloWorld
       React.createElement(CustomInput, this.props),
       this._container
     );
-
-    // //Trigger change so that UI can get initial Output
-    // this._notifyOutputChanged();
   }
 
   /**
@@ -56,12 +50,19 @@ export class HelloWorld
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     // Add code to update control view
-    const changedValue = context.parameters.sampleProperty.raw || "";
 
-    if (changedValue !== undefined && this._value !== changedValue) {
-      console.log("updateView, from: " + this._value + " to: " + changedValue);
-      this._value = changedValue;
-      this.props.value = this._value;
+    const { sampleProperty } = context.parameters;
+
+    if (sampleProperty && sampleProperty.raw) {
+      console.log(
+        "updateView, from: " + this.props.value + " to: " + sampleProperty.raw
+      );
+
+      this.props.value = sampleProperty.raw || "";
+      ReactDOM.render(
+        React.createElement(CustomInput, this.props),
+        this._container
+      );
     }
   }
 
@@ -70,10 +71,10 @@ export class HelloWorld
    * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
    */
   public getOutputs(): IOutputs {
-    console.log("getOutputs: " + this._value);
+    console.log("getOutputs: " + this.props.value);
     return {
-      sampleProperty: this._value,
-    };
+      sampleProperty: this.props.value,
+    } as IOutputs;
   }
 
   /**
@@ -82,11 +83,12 @@ export class HelloWorld
    */
   public destroy(): void {
     // Add code to cleanup control if necessary
+    ReactDOM.unmountComponentAtNode(this._container);
   }
 
-  notifyChange(value: string) {
-    this._value = value;
+  notifyChange(value: string | undefined) {
+    this.props.value = value;
     this._notifyOutputChanged();
-    console.log("value changed from delegate method: " + this._value);
+    console.log("value changed from delegate method: " + this.props.value);
   }
 }
