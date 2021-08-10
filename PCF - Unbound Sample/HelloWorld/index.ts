@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CustomInput, ICustomInputProps } from "../HelloWorld/src/CustomInput";
 
-export class HelloWorld
+export class UnboundSample
   implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
   private props: ICustomInputProps = {
