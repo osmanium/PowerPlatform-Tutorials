@@ -17,6 +17,7 @@ Simple code base for React based PCF Code Component
 
 # Important
 
+- Every PCF control has to be bound to either at least 1 Field or DataSet, additional input parameters not.
 - Test in real environment, Test Harness executes double/wrong updateView
 - Switch to Classic Form Designer to be able to set Control
   ![Logs](Images/SetControl.png)
