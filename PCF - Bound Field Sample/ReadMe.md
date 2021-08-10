@@ -21,3 +21,5 @@ Simple code base for React based PCF Code Component
 # Important
 
 - Test in real environment, Test Harness executes double/wrong updateView
+- Switch to Classic Form Designer to be able to set Control
+  ![Logs](Images/SetControl.png)
