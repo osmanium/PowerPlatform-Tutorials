@@ -18,10 +18,13 @@ export const CustomInput: React.FunctionComponent<ICustomInputProps> = (
     <input
       type="text"
       value={text}
+      onBlur={(e): void => {
+        console.log("input on blur: " + e.currentTarget.value);
+        if (props?.onChange) props.onChange(e.currentTarget.value);
+      }}
       onChange={(e): void => {
         console.log("input on change: " + e.currentTarget.value);
         setText(e.currentTarget.value);
-        if (props?.onChange) props.onChange(e.currentTarget.value);
       }}
     />
   );
