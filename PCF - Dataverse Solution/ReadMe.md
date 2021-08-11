@@ -22,13 +22,16 @@ or short version
 
     pac pcf init -ns <> -n <> -t <>
 
-Control1Shell folder is created manually and
+Control1Shell folder is created manually
+
 ![Files](Images/PCF_Solution_Folder_Structure.png)
 
 Under Control1Shell, below files created by the command
+
 ![PCF](Images/Control1.png)
 
 Final Folder Structure
+
 ![FolderStructure](Images/FolderStructure.png)
 
 # How to Reference PCF Control in Solution
