@@ -16,7 +16,7 @@ It's important to note that, process will not create a shell directory, command 
 
 Same as `Solution Init` command, PCF init does not create a shell directory, it is better to create directory manually then use below command to create PCF control.
 
-    pac pcf init --namespace <> -name <> -template <>
+    pac pcf init --namespace <> --name <> --template <>
 
 or short version
 
