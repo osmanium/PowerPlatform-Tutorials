@@ -38,7 +38,7 @@ Eg: Primary Contact lookup on Account entity can be shown as Contact Main Form i
 - Contact form control component, won't be loaded until the related tab is initially clicked/loaded.
   - Xrm cannot reach unloaded field, if it is not loaded
   - It means, if there is any Xrm validation rule depending on Contact Form then validation will fail due to not able to reach fields
-- Control has a encapsulating border, maybe can be removed by Xrm and setting Tab properties as single content `formContext.ui.tabs.get("").setContentType("singleComponent")` - To Be Tested
+- Control has a encapsulating border, cannot be removed
   ![WebResource](Images/Border.png)
 - Cannot use for creating a new record (of contact, in this case and Quick Create Form can be used or sync workflows, or xrm to create it on the fly when the tab is clicked)
 - Order of OnSave events are not defined, if each passes then saves without a transaction, so no rollback.
