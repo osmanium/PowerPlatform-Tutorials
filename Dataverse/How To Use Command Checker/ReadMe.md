@@ -32,6 +32,10 @@ Due to some unknown reason, if a button is visible which should not be or not vi
 
     Do you want to regenerate all ribbon client metadata for this environment? This background operation may take 15 minutes or longer and may delay other background operations while in-progress. The status can be viewed within Solution history. Once completed clear your browser cache and reopen the application.
 
+Status of regeneration job can be seen in Solution History
+
+![WebResource](Images/RegenerationJob.png)
+
 # References
 
 - https://docs.microsoft.com/en-GB/troubleshoot/power-platform/power-apps/ribbon-issues
