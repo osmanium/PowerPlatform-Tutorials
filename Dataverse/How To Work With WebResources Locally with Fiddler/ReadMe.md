@@ -18,6 +18,7 @@ If you need to change a webresource and test it locally without needing to deplo
 
 ## 3- Make Sure WebResource Is Lodaded And Open In A New Tab
 
+If not opened in a tab, Fiddler may not be able to track it, so keep it open.
 ![WebResource](Images/OpenInBrowser.png)
 
 <br/>
