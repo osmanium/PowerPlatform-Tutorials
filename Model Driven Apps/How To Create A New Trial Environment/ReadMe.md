@@ -5,6 +5,8 @@
 - Choose the app on the page and click on "Try For Free"
   https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/
 
+- It is also possible to create trial environment only for PowerApps without database from https://apps.powerapps.com/trial
+
 ![WebResource](Images/RegistrationPage.png)
 
 <br/>
@@ -52,3 +54,26 @@
 - After selecting app to install, continue with "Save" button, environment creation will take time, eventually you will see newly created environment.
 
 ![WebResource](Images/Env5.png)
+
+- Additional Apps can be installed from below section.
+
+![WebResource](Images/AdditionalApps.png)
+![WebResource](Images/AdditionalApps2.png)
+
+- If you need further products such as Microsoft Office products(Exchange, Teams, etc..) then it can be added through https://admin.microsoft.com/AdminPortal/Home#/subscriptions
+
+- Search in "Purchase Products" menu.
+- Click on Details to start trial.
+
+![WebResource](Images/Exchange1.png)
+
+![WebResource](Images/Exchange2.png)
+
+- Add Licenses manually to users, including admin user.
+- Exchange Online may take up to 1 hour to come online, if it takes longer, try removing and adding license again.
+
+![WebResource](Images/AdditionalTrialProducts.png)
+
+## 4- Resources
+
+https://docs.microsoft.com/en-gb/power-platform/admin/trial-environments
