@@ -66,6 +66,40 @@
   ![WebResource](Images/Dyn1.png)
   ![WebResource](Images/Dyn2.png)
 
+- Sharing Types
+
+  - Share a cloud flow so that other users can run the flow.
+  - Share a cloud flow so that other users can edit the flow.
+  - Package a cloud flow by using Microsoft Dataverse solutions to copy a flow into different Microsoft Power Platform environments, such as Test and Production.
+  - Share a copy of a cloud flow.
+
+  ![WebResource](Images/Share1.png)
+
+- When collaborating with others on a flow, you might want to designate one user to manage the connections so that they're all in the same context.
+
+- Determine the need to share by using co-ownership:
+  |Scenario|Options|
+  |----|-----|
+  |I want to allow another user to edit my flow|Co-ownership is the best option.|
+  |I have a flow that triggers when someone adds a list item to SharePoint or creates a row in a Dataverse table. Do I need to add every user who adds items as a co-owner of my flow?|No, this flow is an automated flow that's triggered by an event. As long as the flow connection user has access to the list or table, the flow will run properly without you needing to add all users as owners or run-only.|
+  |I have an instant flow and I want others to run the flow.|Co-ownership isn't required; you should set up the users as run-only.|
+  |I have a scheduled flow and I want others to run it on demand in addition to the scheduled times.|Co-ownership is the best option. However, be aware that the users will have more permissions than only running the flow.|
+
+- When you send a copy of your flow to a user/team, and if you send an updated version, make sure later one has a different name, otherwise it will look exactly same as first one.
+  ![WebResource](Images/Share2.png)
+
+- Sharing a flow that is created or included in a solution has an extra layer of security, which affects how you share with other users.
+- If flow is in a solution, then flow definition is stored in Dataverse and shared users must have Dataverse Security role and privilege on Process entity.
+- System Administrator or System Customizer built-in roles have the equivalency of owner access to all cloud flows in the environment without a direct share being required.
+- Users who gain access to a cloud flow through a security role and not a direct share aren't listed in the owner's list on the cloud flow.
+- Below has access to all the Flows in the environment, can run-edit-delete-etc.
+  ![WebResource](Images/SecRole1.png)
+- User level privilege gives only user level access, meaning, user can access only user created Flows.
+  ![WebResource](Images/SecRole2.png)
+- If you want to share a flow with a group of users, first you need to associate Azure AD Group or Office Group with a Dataverse Team, then provide security role (including Process entity).
+  ![WebResource](Images/Share3.png)
+- Regardless of who to share is depending on the users license.
+
 # Known Limits
 
 - Canvas app instant flows must be created from an app already in a solution since adding this type of flow from outside solutions is blocked.
