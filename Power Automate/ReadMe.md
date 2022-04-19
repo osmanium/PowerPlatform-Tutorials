@@ -98,7 +98,10 @@
   ![WebResource](Images/SecRole2.png)
 - If you want to share a flow with a group of users, first you need to associate Azure AD Group or Office Group with a Dataverse Team, then provide security role (including Process entity).
   ![WebResource](Images/Share3.png)
-- Regardless of who to share is depending on the users license.
+- Regardless of who to share is depending on the users license and should be part of Office 365 tenant. Guest users can access if license is assigned.
+
+- For Run-Only users, you can specify which connection to use. You cannot specify for each, it affects all run-only users.
+  ![WebResource](Images/Share4.png)
 
 # Known Limits
 
@@ -158,3 +161,9 @@ Resource: https://docs.microsoft.com/en-us/power-apps/maker/data-platform/soluti
   ![WebResource](Images/ConnectionReference4.png)
 - With Connection Reference
   ![WebResource](Images/ConnectionReference5.png)
+
+# Power Automate Desktop
+
+- Installer: https://docs.microsoft.com/en-us/power-automate/desktop-flows/install
+- UI Language depends on the system language order
+  ![WebResource](Images/Lang1.png)
