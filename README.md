@@ -41,3 +41,10 @@ Series of tutorials related to PowerPlatform
 
 - https://pcf.gallery/
 - https://www.connector.gallery/
+- https://pnp.github.io/
+
+#### Tools
+
+- https://www.xrmtoolbox.com/
+- https://github.com/microsoft/PowerApps-Language-Tooling/
+-
