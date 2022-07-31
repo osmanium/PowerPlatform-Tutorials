@@ -45,6 +45,7 @@ Series of tutorials related to PowerPlatform
 
 #### Tools
 
+- Downloads Tools via PowerShell - https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/download-tools-nuget?view=op-9-1
 - https://www.xrmtoolbox.com/
 - https://github.com/microsoft/PowerApps-Language-Tooling/
 - https://docs.microsoft.com/en-us/power-platform/guidance/creator-kit/overview
