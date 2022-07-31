@@ -43,7 +43,8 @@ Change project type
 
 Create a new project same as previous and add project as dependency to first project.
 
-Solution structure:
+Solution structure
+
 ![WebResource](Images/4.png)
 
 ## Nuget Package Generation
@@ -55,7 +56,8 @@ Change main projects Package setting to generate nuget packages at each build.
 Open the generated nuget package and verify the content. Also notice that PluginBase assembly is also added to package.
 ![WebResource](Images/7.png)
 
-If you try to register this package, you'll get an error
+If you try to register this package, you'll get an error.
+
 ![WebResource](Images/8.png)
 
 You need to make sure `Microsoft.Xrm.Sdk.dll` is not in the package.
@@ -65,11 +67,13 @@ And make sure after removing, save the nuget file.
 ## Registering Plugin Package
 
 Register the nuget package through Plugin Registration Tool
+
 ![WebResource](Images/10.png)
 
 ![WebResource](Images/11.png)
 
 You can change the view to confirm package is registered.
+
 ![WebResource](Images/12.png)
 
 ## References
