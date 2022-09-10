@@ -49,6 +49,7 @@ Series of tutorials related to PowerPlatform
 - https://www.xrmtoolbox.com/
 - https://github.com/microsoft/PowerApps-Language-Tooling/
 - https://docs.microsoft.com/en-us/power-platform/guidance/creator-kit/overview
+- https://drive.google.com/drive/folders/1QXlqGO59epTjj-BjEKnO38kNRzLLxzUl?usp=sharing
 
 #### NPM
 
