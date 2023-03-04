@@ -14,9 +14,13 @@
 ## 2- Login/Register Account
 
 - If you have an work account you can re-use or you can create a completely new account.
-- To enable setting up new account, first click on "Start your free trial" button, it will bring up the "Click here" hyperlink.
+- To enable setting up new account, enter a non-existed "onmicrosoft" email address eg: "test@thisemaildoesnotexist.onmicrosoft.com" 
 
-![WebResource](Images/NewAccount.png)
+![WebResource](Images/NewAccount1.png)
+
+- Click on "Start your free trial" button, it will bring up the "set up" hyperlink to redirect creating new account.
+
+![WebResource](Images/NewAccount2.png)
 
 - Enter your personal email address, even though you use the same email address for different trial environments it will threat as separate environments, so you can create as much environment as needed by using same email address.
 
