@@ -9,6 +9,7 @@ Series of tutorials related to PowerPlatform
 - https://flow.microsoft.com
 - https://admin.microsoft.com
 - https://experience.dynamics.com/releaseplans/
+- https://make.powerpages.microsoft.com
 
 </br>
 
